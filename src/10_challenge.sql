@@ -1,6 +1,6 @@
 CREATE TABLE artists (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(50) NOT NULL,
+  `name` VARCHAR(50) NOT NULL,
   nationality VARCHAR(30) NOT NULL 
 );
 
@@ -12,7 +12,7 @@ CREATE TABLE albums (
   FOREIGN KEY(artist_id) REFERENCES artists(id)
 );
 
-INSERT INTO artists (name, nationality)
+INSERT INTO artists (`name`, nationality)
   VALUES
   ('Michael Jackson', 'USA'),
   ('Nina Simone', 'USA'),

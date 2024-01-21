@@ -1,6 +1,6 @@
 CREATE TABLE `plans` (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(50) NOT NULL,
+  `name` VARCHAR(50) NOT NULL,
   price FLOAT(5, 2) NOT NULL
 );
 
@@ -14,7 +14,7 @@ CREATE TABLE users (
   FOREIGN KEY(plan_id) REFERENCES `plans`(id)
 );
 
-INSERT INTO `plans` (name, price)
+INSERT INTO `plans` (`name`, price)
   VALUES
   ('Anual', 39.90),
   ('Mensal', 5.90),

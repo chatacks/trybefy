@@ -1,8 +1,8 @@
 SELECT 
-  `name` 'Artista'
-FROM artists 
+  `name` 'Artista',
+  GROUP_CONCAT(title) 'Álbuns'
+FROM artists
   INNER JOIN albums
     ON artists.id = albums.artist_id
 GROUP BY `name`
-HAVING COUNT(albums.id) >= 3
-ORDER BY `name`
+ORDER BY `name`;
